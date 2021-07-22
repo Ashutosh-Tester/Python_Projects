@@ -1,5 +1,12 @@
-a=12
-b=24
-print("a = ",a," b = ",b)
-a,b=b,a%b
-print("a = ",a," b = ",b)
+def gcd(x, y):
+    if y == 0:
+        return x
+    else:
+        return gcd(y, x%y)
+
+
+a = int(input('Enter First Number: '))
+b = int(input('Enter Second Number: '))
+
+
+print('The GCD of',a,'and',b,'is',gcd(a,b))
